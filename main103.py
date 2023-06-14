@@ -38,7 +38,7 @@ make the inputted data follow the formating and header title of to template data
     return transformed_data
 
 def main():
-    st.title("CSV Transformation App")
+    st.title("Cubes Import Tool")
     st.write("Upload a CSV file to transform it into the template format.")
 
     uploaded_file = st.file_uploader("Upload CSV file", type=["csv"])
@@ -54,7 +54,7 @@ def main():
             transformed_data = transform_csv(csv_data)
             transformed_df = pd.read_csv(StringIO(transformed_data))
 
-            st.subheader("Transformed Data")
+            st.subheader("Auto Mapped Data")
             st.write(transformed_df)
 
 if __name__ == "__main__":
